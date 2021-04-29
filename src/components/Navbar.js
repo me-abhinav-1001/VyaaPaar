@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 import { Navbar, Nav, NavLink } from "react-bootstrap";
 import { NavDropdown} from "react-bootstrap";
-import im1 from "../images/favicon.png";
+import im1 from "../images/vyaapaarlogo.png"
 import "./navbar.css";
 
 class Navigbar extends Component {

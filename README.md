@@ -5,6 +5,8 @@
 <img src="./docs/VyaapaarFull2.png">
 </p>
 
+<div align="center">
+
 ![Built with React](https://img.shields.io/badge/React-000000?style=for-the-badge&logo=react&logoColor=61DAFB)
 &nbsp;
 ![Built with Babel](https://img.shields.io/badge/Babel-F9DC3E?style=for-the-badge&logo=Babel&logoColor=black)
@@ -16,6 +18,8 @@
 ![Built with Mocha](https://img.shields.io/badge/Mocha-8D6748?style=for-the-badge&logo=Mocha&logoColor=white)
 &nbsp;
 ![Built with Ethereum](https://img.shields.io/badge/Ethereum-3B80AE?style=for-the-badge&logo=Ethereum&logoColor=white)
+
+</div>
 
 <p align="center"> 
 
