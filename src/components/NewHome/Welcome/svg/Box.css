@@ -1,0 +1,61 @@
+.animate-wobble-background-svg {
+  position: absolute;
+  filter: grayscale(100%);
+  opacity: 0.03;
+}
+
+.animate-wobble-background-svg > svg {
+  height: 100%;
+  width: 100%;
+  animation: size-up-down 23s ease infinite;
+}
+
+@keyframes size-up-down {
+  0% {
+    transform: scale(1) rotate(-30deg) translate(-10%, -10%);
+  }
+
+  25% {
+    transform: scale(0.8) translate(0, -10%);
+  }
+
+  66% {
+    transform: scale(1) rotate(30deg) translate(0%, 10%);
+  }
+
+  88% {
+    transform: scale(0.8) translate(10%, 0);
+  }
+
+  100% {
+    transform: scale(1) rotate(-30deg) translate(-10%, -10%);
+  }
+}
+
+.animate-wobble-background-svg:nth-child(1) > svg {
+  animation-delay: -4.6s;
+}
+
+.animate-wobble-background-svg:nth-child(2) > svg {
+  animation-delay: -12.3s;
+}
+
+.animate-wobble-background-svg:nth-child(3) > svg {
+  animation-delay: -17s;
+}
+
+.animate-wobble-background-svg:nth-child(4) > svg {
+  animation-delay: -1s;
+}
+
+.animate-wobble-background-svg:nth-child(5) > svg {
+  animation-delay: -9.3s;
+}
+
+.animate-wobble-background-svg:nth-child(6) > svg {
+  animation-delay: -21s;
+}
+
+.animate-wobble-background-svg:nth-child(7) > svg {
+  animation-delay: -15s;
+}
