@@ -18,7 +18,7 @@ import Loader from "./Loader"
 
 import Metamask from "../components/metamask/main_screen";
 
-import Background from "./background_star/background";
+// import Background from "./background_star/background";
 
 import Blogs from "../components/blogs/Blog_List";
 import Sent from "../components/chats/sent";
@@ -181,7 +181,7 @@ class App extends Component {
 
                 <Route path="/productAdd" exact>
 
-                  <Background />
+                  {/* <Background /> */}
                   {/* <Loading time={0.3} /> */}
                   <A
                     account={this.state.account}
@@ -193,7 +193,7 @@ class App extends Component {
 
                 <Route path="/ItemsOnSale" exact>
                 <Loader time={0.4} />
-                  <Background />
+                  {/* <Background /> */}
                   <D
                     account={this.state.account}
                     products={this.state.products}
@@ -204,7 +204,7 @@ class App extends Component {
 
                 <Route path="/ItemsOwned" exact>
                 <Loader time={0.4} />
-                  <Background />
+                  {/* <Background /> */}
 
                   <C
                     account={this.state.account}
@@ -216,7 +216,7 @@ class App extends Component {
 
                 <Route path="/search" exact>
                 <Loader time={0.4} />
-                  <Background />
+                  {/* <Background /> */}
 
                   <B
                     account={this.state.account}
