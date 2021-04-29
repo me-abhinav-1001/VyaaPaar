@@ -1,0 +1,447 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
+:root {
+  --homepage-bottom-animation-height: max(22vh, 10vw);
+  --circle-diameter-welcome: max(200vh, 200vw);
+}
+
+.welcome-page-section-fullscreen {
+  background-color: rgb(0, 34, 73);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-name-parent-div {
+  font-family: "Lato", sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -0%);
+  text-align: center;
+}
+
+.app-name-parent-div > p.app-name-welcome-page {
+  font-family: 'Megrim', 'Courier New', Courier, monospace;
+  color: aliceblue;
+  letter-spacing: 0.25ch;
+  user-select: none;
+  font-size: 3rem;
+}
+
+/* Sweep To Right */
+.app-name-parent-div > p > span {
+  font-family: 'Megrim', 'Courier New', Courier, monospace;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition: 0.3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.app-name-parent-div > p > span:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.app-name-parent-div:hover > p > span {
+  color: rgb(46, 46, 46);
+  font-weight: bold;
+  padding-left: 0.25ch;
+}
+
+.app-name-parent-div:hover > p > span:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.proceed-to-prototype,
+.proceed-to-prototype:visited,
+.proceed-to-prototype:hover {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 1.5rem;
+  letter-spacing: 0.15ch;
+  transition: 0.3s ease;
+}
+
+.proceed-to-prototype:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.icon-on-link {
+  vertical-align: middle;
+  padding-left: 0.25ch;
+  transition: 0.3s ease;
+}
+
+.proceed-to-prototype:hover .icon-on-link {
+  padding-left: 1ch;
+  color: aqua;
+}
+
+.proceed-to-prototype:hover > span::after {
+  content: " ";
+}
+
+/* this is the css of the div that is fixed at the bottom and is having parcel animation */
+.full-width-tags-div {
+  position: absolute;
+  width: 100%;
+  bottom: var(--homepage-bottom-animation-height);
+  text-align: center;
+  height: 100px;
+  color: white;
+}
+
+.full-width-tags-div > p {
+  opacity: 0;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.125ch;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: italic;
+  animation: animate-tags 10s infinite;
+}
+
+@keyframes animate-tags {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -100%);
+    font-size: 1rem;
+  }
+
+  10% {
+    transform: translate(-50%, -50%);
+  }
+
+  10% {
+    font-size: 1rem;
+    transform: translate(-50%, -50%);
+  }
+
+  20% {
+    font-size: 1.25rem;
+  }
+
+  33% {
+    font-size: 1.25rem;
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.full-width-tags-div > p:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.full-width-tags-div > p:nth-child(2) {
+  animation-delay: 5s;
+}
+
+
+.full-width-tags-div > span {
+  position: absolute;
+  font-size: 1.5rem;
+  color: hsla(0, 0%, 100%, 0.801);
+  letter-spacing: .125ch;
+  transform: translate(-50%,-100%);
+}
+
+.full-width-tags-div > span > span {
+  color:white;
+  font-weight: bold;
+  text-decoration:underline;
+}
+
+/* this is the css of the div that is fixed at the bottom and is having parcel animation */
+.fixed-at-bottom-of-div-100-width {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  height: var(--homepage-bottom-animation-height);
+  width: 100%;
+  z-index: 99;
+  opacity: 1;
+  transition: 0.2s ease;
+}
+
+.welcome-page-section-fullscreen:hover > .fixed-at-bottom-of-div-100-width {
+  opacity: 1;
+}
+
+#svgcart {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  transform: translateX(-120%) skewX(-20deg);
+  animation: animation-cart 10s ease infinite;
+  z-index: 999;
+}
+
+#speed-trail {
+  animation: animation-cart-speed-trail 10s ease infinite;
+}
+
+#svgtruck {
+  position: absolute;
+  height: 100%;
+  animation: animation-truck 10s ease infinite;
+}
+
+#svgparcel {
+  position: absolute;
+  height: 40%;
+  bottom: 60%;
+  left: 0;
+  transform: translateX(-50%);
+  animation: animation-parcel 10s ease infinite;
+}
+
+#svgtable {
+  position: absolute;
+  height: 60%;
+  left: 50%;
+  bottom: 0;
+  transition: 2.5s ease;
+  transform: translateX(-50%);
+  animation: animation-table 10s ease infinite;
+}
+
+@keyframes animation-cart {
+  0% {
+    left: 0;
+    transform: translateX(-120%) skewX(-20deg);
+  }
+
+  20% {
+    left: 50%;
+    transform: translateX(-60%);
+  }
+
+  30% {
+    left: 50%;
+    transform: translateX(-60%);
+  }
+
+  40% {
+    /* transform: skewX(-20deg); */
+  }
+
+  50% {
+    left: 100%;
+    /*  skewX(-20deg); */
+    transform: translateX(20%);
+  }
+
+  100% {
+    left: 100%;
+    transform: translateX(0);
+  }
+}
+
+@keyframes animation-cart-speed-trail {
+  0% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-truck {
+  0% {
+    left: 0%;
+    transform: translateX(-120%) skewX(-20deg);
+  }
+
+  50% {
+    left: 0;
+    transform: translateX(-120%) skewX(-20deg);
+  }
+
+  70% {
+    left: 50%;
+    transform: translateX(-45%);
+  }
+
+  80% {
+    left: 50%;
+    transform: translateX(-45%);
+  }
+
+  100% {
+    left: 100%;
+    transform: translateX(0);
+  }
+}
+
+@keyframes animation-parcel {
+  0% {
+    left: 0;
+    transform: translateX(-75%);
+  }
+
+  20% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  30% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  50% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  66% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+}
+
+@keyframes animation-table {
+  0% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  100% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.circle-half-cut {
+  position: relative;
+  width: var(--circle-diameter-welcome);
+  height: var(--circle-diameter-welcome);
+  background-color: #295bff;
+  top: 80%;
+  border-radius: 100%;
+  transform: translateX(-25%);
+  box-shadow: 0px -20px 20px 20px rgba(0, 0, 0, 0.164);
+}
+
+
+
+.to-github-repo-div,.to-github-repo-div > a {
+  position: fixed;
+  color: white;
+  text-decoration: none;
+  font-size: 2.5rem;
+  right:20px;
+  top:10px;
+  z-index: 999999;
+}
+
+/* this whole set of lines if for the SVF of the shopping cart. Avoid making changes to it until necessary */
+#svgcart-path2 {
+  fill: #ffc107;
+  stroke-width: 0.992361;
+}
+
+#svgcart-path4,
+#svgcart-path6,
+#svgcart-path8 {
+  fill: #fafafa;
+}
+
+#svgcart-circle12,
+#svgcart-circle14,
+#svgcart-path16 {
+  fill: #455a64;
+}
+
+#svgcart-rect27 {
+  fill: #455a64;
+  fill-opacity: 1;
+  stroke: #000022;
+  stroke-width: 0.591159;
+  stroke-opacity: 0;
+}
+
+#svgcart-rect27-1 {
+  fill: #455a64;
+  fill-opacity: 1;
+  stroke: #000022;
+  stroke-width: 0.616331;
+  stroke-opacity: 0;
+}
+
+#svgcart-rect27-1-6 {
+  fill: #455a64;
+  fill-opacity: 1;
+  stroke: #000022;
+  stroke-width: 0.658836;
+  stroke-opacity: 0;
+}

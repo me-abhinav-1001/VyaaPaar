@@ -25,6 +25,7 @@ import Sent from "../components/chats/sent";
 import Mychat from "../components/chats/mychats";
 import Filterchat from "../components/chats/filterchat";
 import Received from "../components/chats/received";
+import AppHome from "../components/NewHome/AppHome";
 
 import Home from "./homie/home";
 
@@ -166,7 +167,7 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route path="/" exact>
-              <Home />
+              <AppHome />
             </Route>
             <Route path="/metamask" exact>
               <Metamask />
