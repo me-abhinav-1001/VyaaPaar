@@ -27,3 +27,6 @@ yarn-error.log*
 .vscode
 .idea
 .atom
+
+#ignoring unnecesarry files
+src/components/NewHome/WelcomeSecond
