@@ -1,7 +1,7 @@
 {
   "name": "eth-marketplace",
   "version": "0.1.0",
-  "description": "Book Selling on Steroids and Blockchain",
+  "description": "This is a blockchain-based application which aims for secure trading of day-to-day items between two peers and also facilitates an anonymous group chat along with p2p blockchain-based chat.",
   "author": "Barakuda Viktara",
   "dependencies": {
     "@material-ui/core": "4.10.0",
