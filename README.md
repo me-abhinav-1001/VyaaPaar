@@ -1,5 +1,9 @@
-Heading1(Title)
-<h1 align = center>Vyaapaar</font></h1>
+
+
+<p align="center"> 
+
+<img src="./docs/VyaapaarFull2.png">
+</p>
 
 ![Built with React](https://img.shields.io/badge/React-000000?style=for-the-badge&logo=react&logoColor=61DAFB)
 &nbsp;
